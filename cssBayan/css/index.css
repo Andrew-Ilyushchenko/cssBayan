@@ -1,0 +1,41 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section:hover {
+    color: rgb(2, 2, 39);
+}
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
+.main-title{
+    font-size: 60px;
+}
+.spoiler-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid gray;
+}
+.spoiler-input {
+    appearance: none;
+}
+.spoiler-input:checked ~ .item-img img{
+    display: block;
+}
+.item-title {
+    font-size: 35px;
+    color: rgb(3, 117, 224);
+}
+.item-img img{
+    display: none;
+    width: 600px;
+    margin: auto;
+    padding: 15px 0;
+    
+}
+
