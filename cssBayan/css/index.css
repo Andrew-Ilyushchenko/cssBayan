@@ -5,41 +5,56 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.section:hover {
- 
+ .section {
 }
 .container {
-    max-width: 1170px;
+    max-width: 60rem;
     margin: auto;
     padding: 0 15px;
 }
-.main-title{
-    font-size: 60px;  
+.main-title {
+    
 }
 .spoiler-item {
     margin-bottom: 15px;
     border-bottom: 1px solid gray;
 }
-.item-title {
-    display: flex;
-    cursor: pointer;
-    font-size: 35px;
-    color: rgb(3, 117, 224);
-}
 .spoiler-input {
     appearance: none;
 }
-
-.spoiler-input:checked + .item-img{
-    display: block;
-    width: 600px;
+.meme-label {
 }
+.about-meme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.meme-title {
+    cursor: pointer;
+    color: rgb(3, 117, 224);
+}
+.plus{
+    width: 1rem;
+    height: 1rem;
+    background: url(../img/plus-solid.svg);
+    background-repeat: no-repeat;
 
-
-.item-img{
-    display: none;
-    margin: auto;
+}
+.meme-img {
+    max-width: 0;
+    max-height: 0;
+    opacity: 0;
     padding: 15px 0;
-}
 
+}
+.spoiler-input:checked + .meme-label > .meme-img {
+    max-height: 30rem;
+    max-width: 30rem;
+    opacity: 1;
+}
+.spoiler-input:checked + .meme-label .about-meme .plus{
+    transform: rotate(45deg);
+}
+.spoiler-input:checked + .meme-title{
+    color: black;
+}
