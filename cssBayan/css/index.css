@@ -8,34 +8,31 @@
 html{
     background-color: rgb(253, 238, 219);
 }
- .section {
-    
-}
 .container {
     max-width: 60rem;
     margin: auto;
-    padding: 0 15px;
+    padding: 0 0.5rem;
     font-size: 1.5rem;
+    color: rgb(3, 117, 224);
 }
 .main-title {
-    border-bottom: 1px solid gray;
-    
+    border-bottom: 0.1rem solid gray;
+    color: black;
 }
 .spoiler-item {
-    margin-bottom: 15px;
-    border-bottom: 1px solid gray;
+    margin-bottom: 1.3rem;
+    border-bottom: 0.1rem solid gray;
 }
+
+
 .spoiler-input {
     appearance: none;
 }
 .meme-label {
     cursor: pointer;
-    color: rgb(3, 117, 224);
     transition: .3s;
 }
-.meme-label:hover{
-    color: black;
-}
+
 .about-meme {
     display: flex;
     justify-content: space-between;
@@ -43,7 +40,6 @@ html{
 }
 .meme-title {
     cursor: pointer;
-    /* color: rgb(3, 117, 224); */
     transition: .5s;
 }
 .plus{
@@ -58,27 +54,36 @@ html{
     max-width: 0;
     max-height: 0;
     opacity: 0;
-    padding: 15px 0;
+    padding: 1.5rem 0;
     margin: auto;
     transition: 0.5s;
-
 }
-.spoiler-input:checked + .meme-label > .meme-img {
+@media(hover:hover){
+    .meme-label:hover .meme-img{
+    max-height: 30rem;
+    max-width: 30rem;
+    opacity: 1;
+    }
+    .meme-label:hover .plus{
+    transform: rotate(45deg);
+    }
+    .container:hover{
+        color: black;
+        cursor: pointer;
+    }
+}
+ .spoiler-input:checked + .meme-label > .meme-img {
     max-height: 30rem;
     max-width: 30rem;
     opacity: 1;
 }
-.spoiler-input:checked + .meme-label .about-meme .plus{
-    transform: rotate(45deg);
-}
-.spoiler-input:checked + .meme-title{
-    color: black;
-}
-
 
 @media(max-width:820px){
     .container{
-        font-size: 1.1rem;
+        max-width: 40rem;
+    }
+    .meme-title{
+        font-size: 0.9rem;
     }
     .plus{
         height: 0.9rem;
@@ -92,14 +97,17 @@ html{
 
 @media(max-width:520px){
     .container{
-        font-size: 0.8rem;
+        max-width: 25rem;
     }
     .plus{
         height: 0.6rem;
         width: 0.6rem;
     }
+    .meme-title{
+        font-size: 0.6rem;
+    }
     .spoiler-input:checked + .meme-label > .meme-img {
         max-height: 15rem;
         max-width: 15rem;
     }
-}
+} 
