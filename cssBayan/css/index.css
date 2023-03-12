@@ -7,7 +7,7 @@
 }
 
 .section:hover {
-    color: rgb(2, 2, 39);
+ 
 }
 .container {
     max-width: 1170px;
@@ -15,27 +15,31 @@
     padding: 0 15px;
 }
 .main-title{
-    font-size: 60px;
+    font-size: 60px;  
 }
 .spoiler-item {
     margin-bottom: 15px;
     border-bottom: 1px solid gray;
 }
-.spoiler-input {
-    appearance: none;
-}
-.spoiler-input:checked ~ .item-img img{
-    display: block;
-}
 .item-title {
+    display: flex;
+    cursor: pointer;
     font-size: 35px;
     color: rgb(3, 117, 224);
 }
-.item-img img{
-    display: none;
+.spoiler-input {
+    appearance: none;
+}
+
+.spoiler-input:checked + .item-img{
+    display: block;
     width: 600px;
+}
+
+
+.item-img{
+    display: none;
     margin: auto;
     padding: 15px 0;
-    
 }
 
