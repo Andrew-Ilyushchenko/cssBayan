@@ -1,0 +1,113 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: rgb(253, 238, 219);
+}
+.container {
+    max-width: 60rem;
+    margin: auto;
+    padding: 0 0.5rem;
+    font-size: 1.5rem;
+    color: rgb(3, 117, 224);
+}
+.main-title {
+    border-bottom: 0.1rem solid gray;
+    color: black;
+}
+.spoiler-item {
+    margin-bottom: 1.3rem;
+    border-bottom: 0.1rem solid gray;
+}
+
+
+.spoiler-input {
+    appearance: none;
+}
+.meme-label {
+    cursor: pointer;
+    transition: .3s;
+}
+
+.about-meme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.meme-title {
+    cursor: pointer;
+    transition: .5s;
+}
+.plus{
+    width: 1rem;
+    height: 1rem;
+    background: url(../img/plus-solid.svg);
+    background-repeat: no-repeat;
+    transition: .6s;
+}
+.meme-img {
+    display: block;
+    max-width: 0;
+    max-height: 0;
+    opacity: 0;
+    padding: 1.5rem 0;
+    margin: auto;
+    transition: 0.5s;
+}
+@media(hover:hover){
+    .meme-label:hover .meme-img{
+    max-height: 30rem;
+    max-width: 30rem;
+    opacity: 1;
+    }
+    .meme-label:hover .plus{
+    transform: rotate(45deg);
+    }
+    .container:hover{
+        color: black;
+        cursor: pointer;
+    }
+}
+ .spoiler-input:checked + .meme-label > .meme-img {
+    max-height: 30rem;
+    max-width: 30rem;
+    opacity: 1;
+}
+
+@media(max-width:820px){
+    .container{
+        max-width: 40rem;
+    }
+    .meme-title{
+        font-size: 0.9rem;
+    }
+    .plus{
+        height: 0.9rem;
+        width: 0.9rem;
+    }
+    .spoiler-input:checked + .meme-label > .meme-img {
+        max-height: 20rem;
+        max-width: 20rem;
+    }
+}
+
+@media(max-width:520px){
+    .container{
+        max-width: 25rem;
+    }
+    .plus{
+        height: 0.6rem;
+        width: 0.6rem;
+    }
+    .meme-title{
+        font-size: 0.6rem;
+    }
+    .spoiler-input:checked + .meme-label > .meme-img {
+        max-height: 15rem;
+        max-width: 15rem;
+    }
+} 
